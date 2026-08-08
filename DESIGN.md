@@ -10,10 +10,12 @@ colors:
   paper: "#F2EBDD"
   paperBright: "#FFF9EE"
   vermilion: "#B93620"
+  headerVermilion: "#B4321E"
   vermilionLight: "#FF8068"
   cobalt: "#2446E8"
   highlighter: "#D5F15A"
   ash: "#6E695F"
+  headerAsh: "#645F56"
   rule: "#B9B0A1"
 typography:
   display-xl:
@@ -98,6 +100,16 @@ components:
     textColor: "{colors.ink}"
     rounded: "{rounded.none}"
     padding: 6px
+  header-docket:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.headerAsh}"
+    rounded: "{rounded.none}"
+    padding: 6px
+  header-section-number:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.headerVermilion}"
+    rounded: "{rounded.none}"
+    padding: 6px
 ---
 
 ## Overview
@@ -109,6 +121,7 @@ THE FLOOR is not decorated with diplomatic symbols. Its identity comes from dipl
 - **Ink** is the default authority and reading color.
 - **Paper** provides warmth without nostalgic parchment cosplay.
 - **Vermilion** belongs only to amendment, objection, correction, and urgent procedural state.
+- **Header Vermilion / Header Ash** are minimally darkened metadata variants that preserve the palette over the translucent fixed-header backdrop while clearing WCAG AA at small sizes.
 - **Cobalt** marks committed action and current procedural focus; it is not a generic “UN blue” wash.
 - **Highlighter** appears sparingly where a negotiable phrase or completed preparation step needs emphasis.
 - Critical meaning is never color-only.

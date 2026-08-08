@@ -119,6 +119,12 @@ test.describe.serial('THE FLOOR release path', () => {
     const cssAnimationNames = await page.locator('.hero-copy > *').evaluateAll((actors) => actors.map((actor) => getComputedStyle(actor).animationName))
     expect(new Set(cssAnimationNames)).toEqual(new Set(['none']))
     await expect(page.getByRole('heading', { level: 1 })).toHaveAccessibleName('The world doesn’t arrive at consensus. You draft it.')
+
+    await page.locator('#motion-study').scrollIntoViewIfNeeded()
+    await page.waitForTimeout(1100)
+    const accessibility = await new AxeBuilder({ page }).analyze()
+    const blockers = accessibility.violations.filter((violation) => criticalImpacts.has(violation.impact ?? ''))
+    expect(blockers, blockers.map((item) => `${item.id}: ${item.help}`).join('\n')).toEqual([])
   })
 
   test('reduced motion removes meaningful travel and 320px reflow remains intact', async ({ page }) => {
