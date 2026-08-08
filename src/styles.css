@@ -259,7 +259,7 @@ img, svg { display: block; max-width: 100%; }
   .pressure-pair span:nth-child(2) { transform: rotate(90deg); }
   .dossier-footer { align-items: start; gap: 1rem; }
   .procedure-sequence { grid-template-columns: 1fr; }
-  .procedure-tabs { grid-template-columns: repeat(5, minmax(0, 1fr)); overflow-x: auto; }
+  .procedure-tabs { grid-template-columns: repeat(5, 7.5rem); overflow-x: auto; }
   .procedure-tabs button { min-width: 7.5rem; min-height: 5.6rem; grid-template-columns: 1fr; padding: .75rem; border-right: 1px solid var(--rule); }
   .procedure-tabs small { display: none; }
   .procedure-number { grid-row: auto; }

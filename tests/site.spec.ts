@@ -59,6 +59,10 @@ test.describe.serial('THE FLOOR release path', () => {
     await page.getByRole('button', { name: /close briefing/i }).click()
     await expect(trigger).toBeFocused()
 
+    const accessibility = await new AxeBuilder({ page }).analyze()
+    const blockers = accessibility.violations.filter((violation) => criticalImpacts.has(violation.impact ?? ''))
+    expect(blockers, blockers.map((item) => `${item.id}: ${item.help}`).join('\n')).toEqual([])
+
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
     expect(overflow).toBeLessThanOrEqual(1)
   })
