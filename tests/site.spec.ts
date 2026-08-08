@@ -65,6 +65,23 @@ test.describe.serial('THE FLOOR release path', () => {
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
     expect(overflow).toBeLessThanOrEqual(1)
+
+    const mediaComposition = await page.locator('#motion-study').evaluate((section) => {
+      const heading = section.querySelector('.motion-study__heading h2') as HTMLElement | null
+      const video = section.querySelector('video') as HTMLVideoElement | null
+      if (!heading || !video) return null
+      const headingRect = heading.getBoundingClientRect()
+      const textRight = Math.max(...[...heading.querySelectorAll('span')].map((span) => span.getBoundingClientRect().right))
+      const videoRect = video.getBoundingClientRect()
+      return {
+        headingSpill: textRight - headingRect.right,
+        displayedAspect: videoRect.width / videoRect.height,
+        naturalAspect: video.videoWidth / video.videoHeight,
+      }
+    })
+    expect(mediaComposition).not.toBeNull()
+    expect(mediaComposition?.headingSpill).toBeLessThanOrEqual(1)
+    expect(Math.abs((mediaComposition?.displayedAspect ?? 0) - (mediaComposition?.naturalAspect ?? 0))).toBeLessThanOrEqual(0.02)
   })
 
   test('procedure and preparation commit visible state and survive reload', async ({ page }) => {
@@ -80,6 +97,28 @@ test.describe.serial('THE FLOOR release path', () => {
     await expect(page.getByRole('checkbox').first()).toBeChecked()
     await page.getByRole('button', { name: /reset preparation/i }).click()
     await expect(page.getByRole('checkbox').first()).not.toBeChecked()
+  })
+
+  test('full motion orchestra registers bounded GSAP actors and scroll triggers', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 })
+    await page.goto('/')
+
+    const root = page.locator('html')
+    await expect(root).toHaveAttribute('data-motion-mode', 'full')
+    await expect(root).toHaveAttribute('data-motion-engine', 'gsap')
+    await expect(root).toHaveAttribute('data-motion-ready', 'true')
+
+    const diagnostics = await page.evaluate(() => (window as typeof window & {
+      __THE_FLOOR_MOTION__?: { mode: string; actorCount: number; scrollTriggerCount: number; mediaActorCount: number; textTimelineCount: number }
+    }).__THE_FLOOR_MOTION__)
+    expect(diagnostics?.mode).toBe('full')
+    expect(diagnostics?.actorCount).toBeGreaterThanOrEqual(12)
+    expect(diagnostics?.scrollTriggerCount).toBeGreaterThanOrEqual(6)
+    expect(diagnostics?.mediaActorCount).toBeGreaterThanOrEqual(5)
+    expect(diagnostics?.textTimelineCount).toBeGreaterThanOrEqual(2)
+    const cssAnimationNames = await page.locator('.hero-copy > *').evaluateAll((actors) => actors.map((actor) => getComputedStyle(actor).animationName))
+    expect(new Set(cssAnimationNames)).toEqual(new Set(['none']))
+    await expect(page.getByRole('heading', { level: 1 })).toHaveAccessibleName('The world doesn’t arrive at consensus. You draft it.')
   })
 
   test('reduced motion removes meaningful travel and 320px reflow remains intact', async ({ page }) => {

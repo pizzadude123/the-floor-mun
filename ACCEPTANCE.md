@@ -18,19 +18,21 @@
 
 ## Visual system
 
-- Opening, Mandate, Committees, Procedure, Delegate Desk, Day, and Closing each use a distinct composition family.
+- Opening, Mandate, Motion Study, Committees, Procedure, Delegate Desk, Day, and Closing each use a distinct composition family.
 - No interchangeable rounded-card grid, glass, blob, globe, particle field, stock image, or copied identity.
-- Original seal, resolution marks, and amendment graphics are delivered as source-controlled SVG/HTML/CSS.
+- Original seal, resolution marks, three procedural image plates, and deterministic drafting film are delivered as source-controlled SVG/HTML/CSS/WebM/MP4.
 - At 1440px the page has an authored asymmetrical editorial grid.
 - At 390px and 320px the page recomposes into one readable procedural column without horizontal scrolling.
 
 ## Motion
 
 - Entrance preserves visible content when JavaScript or animation fails.
+- GSAP owns its actors through one scoped lifecycle; CSS entrance fallbacks are disabled only while that engine is active.
 - Resolution progress communicates current procedure and commits semantic state immediately.
 - Hover effects have focus equivalents and no touch dependency.
-- Reduced motion removes travel, stacking, and drawn strokes while preserving state feedback.
-- No smooth-scroll hijack, autoplay media, continuous marquee, hidden RAF loop, or loader.
+- Reduced motion removes travel, stacking, drawn strokes, and video autoplay while preserving state feedback and the film poster.
+- The muted inline film has a visible pause/play control, does not autoplay under reduced-motion or Save-Data, and is disclosed as procedural media rather than conference footage or Higgsfield output.
+- No smooth-scroll hijack, unpausable autoplay media, continuous marquee, hidden RAF loop, or loader.
 
 ## Accessibility
 
@@ -45,6 +47,7 @@
 
 - Production JS gzip target ≤ 150 KB excluding font files; total initial font payload target ≤ 220 KB.
 - No raster hero asset or third-party script.
+- Video preloads metadata only; verified formats are a 398 KB VP9 WebM and 341 KB H.264 MP4 with a 28 KB WebP poster.
 - Fonts use local packaged WOFF2 and `font-display: swap`.
 - Build, unit tests, typecheck, lint, and browser tests pass.
 - Browser console has zero uncaught errors on desktop and mobile flows.
@@ -54,8 +57,8 @@
 
 Capture and inspect:
 
-- 1440×1000 opening, committees, and delegate desk
-- 390×844 opening, menu open, procedure, and briefing
+- 1440×1000 opening, motion study, committees, and delegate desk
+- 390×844 opening, motion-study heading/film/plates, menu open, procedure, and briefing
 - 320×800 reflow
 - reduced-motion opening and interactive states
 - checklist untouched, partial, complete, and reset

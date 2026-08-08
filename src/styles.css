@@ -57,6 +57,7 @@ img, svg { display: block; max-width: 100%; }
 }
 .eyebrow { margin: 0 0 1.4rem; }
 .section { position: relative; padding: var(--section-y) var(--gutter); }
+.mandate, .procedure, .preparation-desk, .schedule, .closing { overflow: clip; }
 .section > * { width: min(100%, var(--max)); margin-inline: auto; }
 .section-index { margin-bottom: clamp(4rem, 7vw, 7rem); color: var(--ash); }
 .section-heading { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; margin-bottom: clamp(3rem, 6vw, 6rem); }
@@ -105,6 +106,31 @@ img, svg { display: block; max-width: 100%; }
 .section--ink { --rule: #4c4942; width: 100%; max-width: none; background: var(--ink); color: var(--paper); }
 .section--ink > * { width: min(calc(100% - 2 * var(--gutter)), var(--max)); }
 .section--ink .section-index { color: #aaa397; }
+
+.motion-study { overflow: clip; }
+.motion-study__heading { display: grid; grid-template-columns: minmax(0, 8fr) minmax(18rem, 4fr); gap: 2rem 5rem; align-items: end; }
+.motion-study__heading .eyebrow { grid-column: 1 / -1; }
+.motion-study__heading h2 { max-width: 9ch; margin: 0; overflow: clip; font: 760 clamp(4.5rem, 10vw, 11rem)/.76 "Archivo Variable", sans-serif; letter-spacing: -.075em; }
+.motion-study__heading h2 span { display: block; }
+.motion-study__heading h2 span:last-child { color: var(--vermilion-light); }
+.motion-study__heading > p:last-child { max-width: 30rem; margin: 0 0 .5rem; font-size: clamp(1.2rem, 1.7vw, 1.55rem); line-height: 1.35; }
+.motion-study__film { position: relative; margin: clamp(4rem, 8vw, 8rem) auto clamp(7rem, 12vw, 12rem); border: 1px solid #777168; background: #090908; overflow: hidden; }
+.motion-study__film::before, .motion-study__film::after { content: ""; position: absolute; z-index: 2; width: 3.5rem; height: 3.5rem; pointer-events: none; }
+.motion-study__film::before { left: 1rem; top: 1rem; border-left: 2px solid var(--highlighter); border-top: 2px solid var(--highlighter); }
+.motion-study__film::after { right: 1rem; bottom: 4.25rem; border-right: 2px solid var(--vermilion-light); border-bottom: 2px solid var(--vermilion-light); }
+.motion-study__film video { width: 100%; aspect-ratio: 16 / 9; display: block; object-fit: cover; object-position: center; background: var(--paper); }
+.motion-study__film figcaption { display: grid; grid-template-columns: auto minmax(18rem, 1fr); gap: 1rem 4rem; padding: 1rem 11rem 1rem 1rem; border-top: 1px solid #777168; font: 700 .68rem/1.35 ui-monospace, monospace; text-transform: uppercase; }
+.motion-study__film figcaption span:last-child { color: #c8c1b5; }
+.media-toggle { position: absolute; z-index: 3; right: 0; bottom: 0; min-width: 10rem; min-height: 3.65rem; padding: .8rem 1rem; border: 0; border-left: 1px solid var(--ink); background: var(--highlighter); color: var(--ink); cursor: pointer; font: 750 .7rem/1 "Archivo Variable", sans-serif; text-transform: uppercase; }
+.media-toggle:hover, .media-toggle:focus-visible { background: var(--paper-bright); }
+.motion-study__plates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2.5rem); align-items: start; padding-bottom: 2rem; }
+.motion-study__plates figure { min-width: 0; margin: 0; }
+.motion-study__plates figure:nth-child(2) { margin-top: 6rem; }
+.motion-study__plates figure:nth-child(3) { margin-top: 2rem; }
+.motion-study__plates img { width: 100%; height: auto; display: block; border: 1px solid #777168; background: var(--paper); }
+.motion-study__plates figcaption { display: flex; justify-content: space-between; gap: 1rem; padding: .8rem 0; border-top: 1px solid #777168; font: 700 .67rem/1.3 ui-monospace, monospace; text-transform: uppercase; }
+.motion-study__plates figcaption span:last-child { color: #c8c1b5; text-align: right; }
+
 .committee-stack { display: grid; gap: 1.5rem; padding-bottom: 5rem; }
 .committee-dossier { position: sticky; top: calc(var(--header-h) + 1.25rem + var(--dossier-offset)); min-height: min(62rem, 65svh); display: grid; grid-template-rows: auto 1fr auto auto; grid-template-columns: minmax(0, 7fr) minmax(12rem, 3fr); gap: 2rem; padding: clamp(1.5rem, 4vw, 4rem); background: var(--paper); color: var(--ink); border-top: 8px solid var(--vermilion); box-shadow: 0 -1.2rem 2rem rgb(0 0 0 / .3); overflow: hidden; }
 .committee-dossier[data-tone="cobalt"] { background: var(--cobalt); color: var(--paper-bright); border-color: var(--highlighter); }
@@ -216,6 +242,11 @@ img, svg { display: block; max-width: 100%; }
 .hero-copy > *:nth-child(3) { animation-delay: .18s; }
 .hero-copy > *:nth-child(4) { animation-delay: .28s; }
 .hero-seal { animation: hero-enter 1.1s .18s var(--ease-out) both; }
+html[data-motion-engine="gsap"] .hero-copy > *,
+html[data-motion-engine="gsap"] .hero-seal,
+html[data-motion-engine="gsap"] .committee-dossier,
+html[data-motion-engine="gsap"] .schedule-list li,
+html[data-motion-engine="gsap"] .mandate-steps li { animation: none; }
 
 @supports (animation-timeline: view()) {
   .committee-dossier { animation: dossier-enter linear both; animation-timeline: view(); animation-range: entry 0% cover 28%; }
@@ -240,7 +271,17 @@ img, svg { display: block; max-width: 100%; }
   .site-navigation[data-open="true"] { display: grid; }
   .site-navigation > a, .nav-docket { min-height: 4.6rem; padding: 0; border: 0; border-bottom: 1px solid #514e47; font-size: 1.35rem; }
   .nav-docket { color: var(--highlighter); font-size: .7rem; }
-  .section-heading--split, .dialog-grid, .site-footer { grid-template-columns: 1fr; }
+  .section-heading--split, .dialog-grid, .site-footer, .motion-study__heading { grid-template-columns: 1fr; }
+  .motion-study__heading h2 { max-width: 8ch; font-size: clamp(3.5rem, 16vw, 6.25rem); }
+  .motion-study__heading > p:last-child { max-width: 34rem; }
+  .motion-study__film video { aspect-ratio: 16 / 9; }
+  .motion-study__film figcaption { grid-template-columns: 1fr; padding: 1rem; }
+  .motion-study__film::after { bottom: 8rem; }
+  .media-toggle { position: relative; width: 100%; border-left: 0; border-top: 1px solid var(--ink); }
+  .motion-study__plates { grid-template-columns: 1fr; gap: 0; }
+  .motion-study__plates figure { width: 86%; }
+  .motion-study__plates figure:nth-child(2) { margin: 3rem 0 0 auto; }
+  .motion-study__plates figure:nth-child(3) { width: 92%; margin: 3rem 0 0; }
   .hero { min-height: auto; grid-template-columns: 1fr; display: block; padding-top: calc(var(--header-h) + 4rem); padding-bottom: 9rem; }
   .hero-copy { position: relative; }
   .hero h1 { font-size: clamp(3.7rem, 17vw, 7rem); line-height: .82; }

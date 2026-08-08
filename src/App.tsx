@@ -1,7 +1,9 @@
 import { BriefingDialog } from './components/BriefingDialog'
+import { MotionStudy } from './components/MotionStudy'
 import { PreparationDesk } from './components/PreparationDesk'
 import { ProcedureSequence } from './components/ProcedureSequence'
 import { SiteHeader } from './components/SiteHeader'
+import { useMotionOrchestra } from './motion/useMotionOrchestra'
 
 const mandateSteps = [
   ['Listen', 'for the interest beneath the position.'],
@@ -70,6 +72,8 @@ function SectionIndex({ children }: { children: React.ReactNode }) {
 }
 
 function App() {
+  useMotionOrchestra()
+
   return (
     <div className="site-shell" id="top">
       <a className="skip-link" href="#main-content">Skip to content</a>
@@ -130,8 +134,10 @@ function App() {
           <p className="margin-note">The sentence is the smallest unit of coalition.</p>
         </section>
 
+        <MotionStudy />
+
         <section className="committees section section--ink" id="committees" aria-labelledby="committees-title">
-          <SectionIndex>02 / THE ROOMS</SectionIndex>
+          <SectionIndex>03 / THE ROOMS</SectionIndex>
           <header className="section-heading section-heading--split">
             <div>
               <p className="eyebrow">Example committee architecture</p>
@@ -166,7 +172,7 @@ function App() {
         </section>
 
         <section className="procedure section" id="procedure" aria-labelledby="procedure-title">
-          <SectionIndex>03 / THE PROCEDURE</SectionIndex>
+          <SectionIndex>04 / THE PROCEDURE</SectionIndex>
           <header className="section-heading">
             <p className="eyebrow">A resolution is a record of changed language</p>
             <h2 id="procedure-title">From position to recorded language.</h2>
@@ -176,7 +182,7 @@ function App() {
         </section>
 
         <section className="preparation-desk section" id="delegate-desk" aria-labelledby="desk-title">
-          <SectionIndex>04 / THE DELEGATE DESK</SectionIndex>
+          <SectionIndex>05 / THE DELEGATE DESK</SectionIndex>
           <header className="desk-heading">
             <p className="eyebrow">Preparation that survives the room</p>
             <h2 id="desk-title">Arrive with more than a speech.</h2>
@@ -186,7 +192,7 @@ function App() {
         </section>
 
         <section className="schedule section section--cobalt" id="day" aria-labelledby="day-title">
-          <SectionIndex>05 / THE DAY</SectionIndex>
+          <SectionIndex>06 / THE DAY</SectionIndex>
           <header className="section-heading section-heading--split">
             <div>
               <p className="eyebrow">Illustrative day</p>
@@ -206,7 +212,7 @@ function App() {
         </section>
 
         <section className="closing section" aria-labelledby="closing-title">
-          <SectionIndex>06 / THE FIRST SENTENCE</SectionIndex>
+          <SectionIndex>07 / THE FIRST SENTENCE</SectionIndex>
           <div className="closing-copy">
             <p className="eyebrow">The floor is yours</p>
             <h2 id="closing-title">Do not wait for consensus. Write the first sentence it can enter.</h2>

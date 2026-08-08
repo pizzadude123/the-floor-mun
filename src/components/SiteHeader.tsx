@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const navigation = [
   { href: '#mandate', label: 'Mandate' },
+  { href: '#motion-study', label: 'Motion study' },
   { href: '#committees', label: 'Committees' },
   { href: '#procedure', label: 'Procedure' },
   { href: '#delegate-desk', label: 'Delegate desk' },

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 820" role="img" aria-labelledby="title desc">
+  <title id="title">Source field</title>
+  <desc id="desc">Cobalt source clauses remain separated on a cream working sheet.</desc>
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#c4bbaa" stroke-width="1" opacity=".48"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="820" fill="#f2ebdd"/>
+  <rect width="640" height="820" fill="url(#grid)"/>
+  <path d="M36 34H604V786H36Z" fill="#fff9ee" stroke="#12110e" stroke-width="3"/>
+  <path d="M36 34H604V46H36Z" fill="#2446e8"/>
+  <g font-family="Arial, sans-serif" font-weight="700" fill="#12110e">
+    <text x="70" y="96" font-size="17" letter-spacing="2">SOURCE FIELD / 01</text>
+    <text x="70" y="177" font-size="66" letter-spacing="-4">POSITION</text>
+    <text x="70" y="237" font-size="66" letter-spacing="-4">ON RECORD</text>
+  </g>
+  <g stroke="#12110e" stroke-width="10" stroke-linecap="square">
+    <path d="M78 354H278"/><path d="M362 354H554"/>
+    <path d="M78 430H244"/><path d="M388 430H554"/>
+    <path d="M78 506H300"/><path d="M344 506H554"/>
+  </g>
+  <g fill="#2446e8">
+    <circle cx="78" cy="354" r="12"/><circle cx="554" cy="354" r="12"/>
+    <circle cx="78" cy="430" r="12"/><circle cx="554" cy="430" r="12"/>
+    <circle cx="78" cy="506" r="12"/><circle cx="554" cy="506" r="12"/>
+  </g>
+  <path d="M70 626H570" stroke="#12110e" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="1.5" fill="#12110e">
+    <text x="70" y="670">TWO POSITIONS</text><text x="410" y="670">NO BRIDGE YET</text>
+  </g>
+  <path d="M70 714H220" stroke="#2446e8" stroke-width="18"/>
+</svg>

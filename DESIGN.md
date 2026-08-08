@@ -141,6 +141,14 @@ Corners are nearly square. Circular geometry is reserved for the original confer
 - The checklist uses native checkboxes with an oversized custom boundary and visible focus.
 - The briefing uses a native dialog with an explicit close action and meaningful initial focus.
 
+## Motion & media
+
+GSAP is an orchestration layer, not the source of meaning. One scoped lifecycle owns hero typography, the seal, section entrances, dossier pressure, schedule rhythm, and the Motion Study sequence. CSS fallback entrances are disabled only when GSAP is active; teardown restores a stable document with no duplicate trigger ownership.
+
+The Motion Study visualizes the governing transformation rather than decorating it: a locked camera watches an amendment strip traverse fragmented clauses and pull them toward one working line. The six-second WebM/MP4 loop and its poster are deterministic local assets. The three Source / Amend / Adopt SVG plates are authored illustrations, not photographs or event proof.
+
+The film is muted, inline, and visitor-pausable. Reduced-motion and Save-Data modes suppress autoplay and leave the poster visible. The provenance caption must remain explicit: this is not conference footage and is not a Higgsfield render unless an authenticated Higgsfield output actually replaces it.
+
 ## Do's and Don'ts
 
 **Do:** derive every visual rule from document-making, make revision visible, vary section composition, preserve semantic reading order, and make mobile feel edited rather than squeezed.

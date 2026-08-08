@@ -23,6 +23,7 @@ vision_lock:
   narrative_sequence:
     - "Challenge: consensus does not simply appear"
     - "Mandate: learn the transformation from position to language"
+    - "Motion study: watch an amendment align fragmented clauses into shared working text"
     - "Committees: encounter distinct kinds of pressure"
     - "Procedure: move from research to vote"
     - "Delegate desk: prepare through a useful interactive checklist"
@@ -31,15 +32,15 @@ vision_lock:
   composition_family: "Overscale editorial broadsheet crossed with a working resolution: margin rules, clause numbers, annotations, signatures, and authored asymmetry"
   typography_direction: "Archivo Variable for procedural force; Newsreader Variable for diplomatic/editorial reading; system mono for status and clause labels"
   color_material_direction: "Warm paper, near-black ink, amendment vermilion, procedural cobalt, restrained highlighter acid; no diplomatic-blue cliché wash"
-  original_asset_strategy: "Custom typographic seal, resolution-grid SVGs, margin annotations, strike/replacement marks, and code-authored paper texture"
+  original_asset_strategy: "Custom typographic seal, resolution-grid SVGs, three procedural image plates, a deterministic six-second drafting film, margin annotations, strike/replacement marks, and code-authored paper texture"
   signature_interaction: "As the visitor moves through procedure, a resolution panel accumulates clauses, amendments, objections, and a final vote state"
   familiar_task_paths:
     - "Skip link and semantic nav"
-    - "Direct anchors for mandate, committees, procedure, and delegate desk"
+    - "Direct anchors for mandate, motion study, committees, procedure, and delegate desk"
     - "Native dialog briefing with keyboard close"
     - "Checklist with persistent local progress and reset"
   mobile_recomposition: "No compressed desktop; split spreads become single-column numbered clauses, sticky artifacts release, committee sheets become swipe-free stacked documents"
-  reduced_motion: "No travel/parallax/rotation; instant state commits, static editorial annotations, visible progress preserved"
+  reduced_motion: "No travel/parallax/rotation or media autoplay; instant state commits, static poster and editorial annotations, visible progress preserved"
   proof_and_disclosure_rules:
     - "Illustrative committee and schedule content is labeled beside the content"
     - "No registration CTA until a real backend and organizer truth are supplied"
@@ -62,7 +63,7 @@ vision_lock:
     - "Centered slogan over gradient blob followed by equal rounded cards"
     - "Blue glassmorphism and world-map dots as identity"
     - "Invented prestige or urgency"
-    - "Endless marquee, loader, autoplay video, or pointer-only behavior"
+    - "Endless marquee, loader, unpausable autoplay video, media autoplay under reduced-motion or Save-Data, or pointer-only behavior"
     - "Repeated generic fade-up on every element"
   references_used_for_mechanisms_only:
     - "Completed general website mastery research waves under /Users/pranay/website-research/research/website-mastery-2026-08-08/waves"

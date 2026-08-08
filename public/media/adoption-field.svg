@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 820" role="img" aria-labelledby="title desc">
+  <title id="title">Adoption field</title>
+  <desc id="desc">Formerly separated clauses align into one shared working line on cobalt.</desc>
+  <rect width="640" height="820" fill="#2446e8"/>
+  <g stroke="#91a1ff" stroke-width="1" opacity=".65">
+    <path d="M0 82H640M0 164H640M0 246H640M0 328H640M0 410H640M0 492H640M0 574H640M0 656H640M0 738H640"/>
+    <path d="M80 0V820M160 0V820M240 0V820M320 0V820M400 0V820M480 0V820M560 0V820"/>
+  </g>
+  <path d="M36 34H604V786H36Z" fill="none" stroke="#fff9ee" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-weight="700" fill="#fff9ee">
+    <text x="70" y="96" font-size="17" letter-spacing="2">ADOPTION FIELD / 03</text>
+    <text x="70" y="177" font-size="66" letter-spacing="-4">ONE TEXT.</text>
+    <text x="70" y="237" font-size="66" letter-spacing="-4">MANY TRACES.</text>
+  </g>
+  <g stroke="#fff9ee" stroke-width="10">
+    <path d="M78 354H554"/><path d="M78 430H554"/><path d="M78 506H554"/>
+  </g>
+  <g fill="#d5f15a">
+    <circle cx="78" cy="354" r="12"/><circle cx="554" cy="354" r="12"/>
+    <circle cx="78" cy="430" r="12"/><circle cx="554" cy="430" r="12"/>
+    <circle cx="78" cy="506" r="12"/><circle cx="554" cy="506" r="12"/>
+  </g>
+  <rect x="70" y="602" width="500" height="18" fill="#d5f15a"/>
+  <g font-family="Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="1.5" fill="#fff9ee">
+    <text x="70" y="674">ALIGNMENT RECORDED</text><text x="430" y="674">NOT ERASURE</text>
+  </g>
+  <path d="M70 718H240" stroke="#b93620" stroke-width="8"/>
+  <path d="M240 718H570" stroke="#d5f15a" stroke-width="8"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 820" role="img" aria-labelledby="title desc">
+  <title id="title">Amendment field</title>
+  <desc id="desc">A vermilion amendment crosses black clause fragments on a dark working field.</desc>
+  <rect width="640" height="820" fill="#12110e"/>
+  <g stroke="#514e47" stroke-width="1" opacity=".7">
+    <path d="M0 82H640M0 164H640M0 246H640M0 328H640M0 410H640M0 492H640M0 574H640M0 656H640M0 738H640"/>
+    <path d="M80 0V820M160 0V820M240 0V820M320 0V820M400 0V820M480 0V820M560 0V820"/>
+  </g>
+  <path d="M36 34H604V786H36Z" fill="none" stroke="#f2ebdd" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-weight="700" fill="#fff9ee">
+    <text x="70" y="96" font-size="17" letter-spacing="2">AMENDMENT FIELD / 02</text>
+    <text x="70" y="177" font-size="66" letter-spacing="-4">WORDING</text>
+    <text x="70" y="237" font-size="66" letter-spacing="-4">UNDER TEST</text>
+  </g>
+  <g stroke="#f2ebdd" stroke-width="10">
+    <path d="M78 354H554"/><path d="M78 430H554"/><path d="M78 506H554"/>
+  </g>
+  <path d="M116 326L526 530" stroke="#b93620" stroke-width="28"/>
+  <path d="M116 530L526 326" stroke="#b93620" stroke-width="8"/>
+  <rect x="178" y="598" width="284" height="70" fill="#b93620" stroke="#fff9ee" stroke-width="2"/>
+  <text x="320" y="642" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="19" letter-spacing="2" fill="#fff9ee">REPLACE / MERGE</text>
+  <g font-family="Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="1.5" fill="#fff9ee">
+    <text x="70" y="730">STRIKE ONCE</text><text x="410" y="730">RECORD WHY</text>
+  </g>
+</svg>
