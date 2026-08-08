@@ -8,7 +8,7 @@
 
 **Core line:** The world doesn’t arrive at consensus. You draft it.
 
-**Primary action:** Enter the delegate briefing
+**Primary action:** Open the role briefing
 **Secondary action:** Explore the committees
 
 ## Disclosure
@@ -63,6 +63,14 @@ Place this qualification in the opening viewport and repeat it near illustrative
   - `I can name three delegations whose interests may overlap mine.`
   - `I know how I will ask for clarification, yield, and propose an amendment.`
 
+### Role briefing — concept state, not applications
+
+- Public state: `Concept only / No applications are open`
+- **Delegate:** rehearse research, coalition-building, clause drafting, and procedure; a real event must publish eligibility, assignments, guides, deadlines, fees, and support.
+- **Faculty advisor:** inspect preparation and truth requirements; a real organizer must publish supervision, safeguarding, accessibility, travel, privacy, payment, and escalation terms.
+- **Chair / dais:** inspect mandate-to-record procedure; a real organizer must publish rules, training, accommodations, document versions, and incident authority.
+- Repeated briefing instances use unique semantic IDs and return focus to their own trigger.
+
 ### Illustrative day
 
 - `08:30 / Credential check and room orientation`
@@ -76,7 +84,7 @@ Place this qualification in the opening viewport and repeat it near illustrative
 
 - Heading: `Do not wait for consensus. Write the first sentence it can enter.`
 - Body: `This concept is ready to be fitted to a real conference once the organizer, dates, venue, committees, fees, safeguarding, accessibility, and registration system are verified.`
-- Action: `Open the build briefing`
+- Action: `Open the role briefing`
 
 ## Claim ledger
 

@@ -6,6 +6,7 @@
 - Every committee and schedule module is labeled illustrative.
 - No registration, affiliation, date, location, fee, sponsor, testimonial, metric, or outcome is fabricated.
 - Primary CTA opens an actual briefing experience; it never implies registration.
+- Briefing exposes the current event state as concept-only with no applications open, and separates delegate, faculty-advisor, and chair/dais responsibilities without inventing operations.
 
 ## Semantic and task path
 
@@ -14,6 +15,7 @@
 - Main content and anchor destinations remain readable without JavaScript.
 - Mobile navigation opens/closes through a native button with `aria-expanded` and Escape handling.
 - Briefing opens as a native dialog, closes by button/Escape, and returns focus.
+- Repeated briefing instances generate unique labeling IDs and return focus to the trigger that opened them.
 - Checklist uses native inputs, announces progress, persists only locally, and can reset.
 
 ## Visual system

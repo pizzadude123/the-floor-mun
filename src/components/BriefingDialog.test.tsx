@@ -8,16 +8,28 @@ describe('BriefingDialog', () => {
     const user = userEvent.setup()
     render(<BriefingDialog />)
 
-    const trigger = screen.getByRole('button', { name: /enter the delegate briefing/i })
+    const trigger = screen.getByRole('button', { name: /open the role briefing/i })
     await user.click(trigger)
 
     const dialog = screen.getByRole('dialog', { name: /build briefing/i })
     expect(dialog).toHaveAttribute('open')
     expect(dialog).toHaveTextContent('Not registration')
+    expect(dialog).toHaveTextContent('Concept only')
+    expect(dialog).toHaveTextContent('No applications are open')
     expect(dialog).toHaveTextContent('Organizer identity')
+    expect(screen.getByRole('heading', { name: 'Delegate' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Faculty advisor' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Chair / dais' })).toBeInTheDocument()
 
     await user.click(screen.getByRole('button', { name: /close briefing/i }))
     expect(dialog).not.toHaveAttribute('open')
     expect(trigger).toHaveFocus()
+  })
+
+  it('generates unique dialog labels when the briefing appears twice on the page', () => {
+    const { container } = render(<><BriefingDialog /><BriefingDialog /></>)
+    const ids = [...container.querySelectorAll('[id]')].map((element) => element.id)
+    expect(ids.length).toBeGreaterThan(0)
+    expect(new Set(ids).size).toBe(ids.length)
   })
 })

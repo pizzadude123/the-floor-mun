@@ -222,12 +222,24 @@ img, svg { display: block; max-width: 100%; }
 .site-footer div { display: grid; gap: .3rem; }
 .site-footer p { max-width: 31rem; margin: 0; text-transform: none; line-height: 1.45; letter-spacing: 0; }
 
-.briefing-dialog { width: min(74rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); margin: auto; padding: clamp(1.5rem, 4vw, 4rem); color: var(--ink); background: var(--paper-bright); border: 2px solid var(--ink); box-shadow: 1rem 1rem 0 var(--highlighter); }
+.briefing-dialog { width: min(74rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); margin: auto; padding: clamp(1.5rem, 4vw, 4rem); overflow: auto; color: var(--ink); background: var(--paper-bright); border: 2px solid var(--ink); box-shadow: 1rem 1rem 0 var(--highlighter); }
 .briefing-dialog::backdrop { background: rgb(18 17 14 / .82); backdrop-filter: blur(5px); }
-.dialog-docket { display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--ink); }
+.dialog-docket { display: flex; justify-content: space-between; gap: .5rem 1rem; padding: 0 9rem 1rem 0; border-bottom: 1px solid var(--ink); }
 .briefing-dialog > .eyebrow { margin-top: 3rem; color: var(--vermilion); }
 .briefing-dialog h2 { margin: 0; font: 750 clamp(3.5rem, 8vw, 7.5rem)/.82 "Archivo Variable", sans-serif; letter-spacing: -.07em; }
 .dialog-lead { max-width: 49rem; font-size: clamp(1.3rem, 2vw, 1.8rem); line-height: 1.3; }
+.dialog-state { display: grid; grid-template-columns: minmax(8rem, .35fr) 1fr; gap: 1.25rem; margin: 2rem 0 0; padding: 1rem 0; border-block: 1px solid var(--ink); }
+.dialog-state strong { font: 750 .78rem/1.2 "Archivo Variable", sans-serif; text-transform: uppercase; color: var(--vermilion); }
+.dialog-state span { max-width: 48rem; line-height: 1.45; }
+.dialog-role-section { margin-top: 2.5rem; }
+.dialog-role-section > h3 { margin: 0 0 1rem; font: 750 .78rem/1 "Archivo Variable", sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+.dialog-role-map { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.dialog-role-map article { min-width: 0; padding: 1.25rem; border-left: 1px solid var(--ink); }
+.dialog-role-map article:first-child { border-left: 0; }
+.dialog-role-map article > span { color: var(--vermilion); font: 700 .65rem/1 ui-monospace, monospace; }
+.dialog-role-map h4 { margin: .75rem 0 1rem; font: 720 clamp(1.35rem, 2vw, 2rem)/1 "Archivo Variable", sans-serif; letter-spacing: -.04em; }
+.dialog-role-map p { margin: 0; line-height: 1.45; }
+.dialog-role-map p + p { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .88rem; }
 .dialog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; border-top: 1px solid var(--ink); }
 .dialog-grid section { padding-top: 1.5rem; }
 .dialog-grid h3 { margin: 0 0 1rem; font: 700 1rem/1 "Archivo Variable", sans-serif; text-transform: uppercase; }
@@ -273,7 +285,10 @@ html[data-motion-engine="gsap"] .mandate-steps li { animation: none; }
   .site-navigation[data-open="true"] { display: grid; }
   .site-navigation > a, .nav-docket { min-height: 4.6rem; padding: 0; border: 0; border-bottom: 1px solid #514e47; font-size: 1.35rem; }
   .nav-docket { color: var(--highlighter); font-size: .7rem; }
-  .section-heading--split, .dialog-grid, .site-footer, .motion-study__heading { grid-template-columns: 1fr; }
+  .section-heading--split, .dialog-grid, .dialog-role-map, .site-footer, .motion-study__heading { grid-template-columns: 1fr; }
+  .dialog-docket { display: grid; justify-content: start; padding-right: 0; }
+  .dialog-role-map article { border-left: 0; border-top: 1px solid var(--ink); }
+  .dialog-role-map article:first-child { border-top: 0; }
   .motion-study__heading h2 { max-width: 8ch; font-size: clamp(3.5rem, 16vw, 6.25rem); }
   .motion-study__heading > p:last-child { max-width: 34rem; }
   .motion-study__film video { aspect-ratio: 16 / 9; }
@@ -342,6 +357,7 @@ html[data-motion-engine="gsap"] .mandate-steps li { animation: none; }
   .schedule-list time { font-size: .95rem; letter-spacing: -.02em; writing-mode: vertical-rl; transform: rotate(180deg); }
   .schedule-dot { width: 1.7rem; height: 1.7rem; }
   .briefing-dialog { width: calc(100% - 1rem); max-height: calc(100dvh - 1rem); padding: 4.5rem 1rem 1.5rem; box-shadow: .35rem .35rem 0 var(--highlighter); }
+  .dialog-state { grid-template-columns: 1fr; gap: .45rem; }
   .button--close { top: .75rem; right: .75rem; }
 }
 
